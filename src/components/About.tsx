@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { HiLocationMarker, HiAcademicCap, HiBriefcase } from 'react-icons/hi'
 import { PERSONAL, STATS } from '../data/constants'
+import profileImg from '../assets/profile.jpg'
 
 const About = () => {
   const ref = useRef(null)
@@ -70,8 +71,12 @@ const About = () => {
           >
             <div className="relative">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 opacity-50 blur" />
-              <div className="relative flex h-64 w-64 items-center justify-center rounded-2xl bg-card sm:h-72 sm:w-72">
-                <span className="text-7xl font-extrabold text-gradient sm:text-8xl">VA</span>
+              <div className="relative flex h-64 w-64 overflow-hidden rounded-2xl bg-card sm:h-72 sm:w-72">
+                <img
+                  src={profileImg}
+                  alt={PERSONAL.name}
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
 
