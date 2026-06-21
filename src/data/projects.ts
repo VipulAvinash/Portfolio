@@ -19,7 +19,7 @@ export const projects: Project[] = [
     tags: ['MERN', 'RBAC'],
     github: 'https://github.com/VipulAvinash/Student-Management',
     live: 'https://student-management-vip.netlify.app/login',
-    featured: true,
+    featured: true, 
   },
 
     {
