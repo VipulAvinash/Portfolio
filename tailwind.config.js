@@ -9,9 +9,15 @@ export default {
         muted: '#64748B',
         primary: '#F1F5F9',
         accent: '#7C3AED',
+        codenest: {
+          bg: '#070b0a',
+          accent: '#5ed29c',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        jakarta: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
       },
       animation: {
         bounce: 'bounce 2s infinite',

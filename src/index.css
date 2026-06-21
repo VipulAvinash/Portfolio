@@ -8,11 +8,47 @@
   }
 
   body {
-    @apply bg-background text-primary font-sans antialiased;
+    @apply bg-codenest-bg text-primary font-sans antialiased;
   }
 
   ::selection {
-    @apply bg-violet-600/40 text-white;
+    @apply bg-codenest-accent/40 text-white;
+  }
+}
+
+@layer components {
+  .liquid-glass-card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .liquid-glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.4px;
+    border-radius: inherit;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.35) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
   }
 }
 
