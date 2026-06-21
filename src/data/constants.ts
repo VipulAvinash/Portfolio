@@ -28,7 +28,7 @@ export const NAV_LINKS = [
 ] as const
 
 export const STATS = [
-  { value: '1+', label: 'Year Experience' },
+  { value: '3+', label: 'Months Experience' },
   { value: '10+', label: 'Projects' },
   { value: '3', label: 'AI Integrations' },
 ] as const

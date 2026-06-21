@@ -15,7 +15,7 @@ function BackgroundVideo() {
 
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = HLS_STREAM
-      video.play().catch(() => {})
+      video.play().catch(() => { })
       return
     }
 
@@ -24,7 +24,7 @@ function BackgroundVideo() {
       hls.loadSource(HLS_STREAM)
       hls.attachMedia(video)
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        video.play().catch(() => {})
+        video.play().catch(() => { })
       })
       return () => hls.destroy()
     }
@@ -104,7 +104,7 @@ function GridLines() {
 function LiquidGlassCard() {
   return (
     <div className="liquid-glass-card mb-2 -translate-y-[50px] rounded-2xl p-5">
-      <p className="mb-3 text-[14px] tracking-wide text-white/60">
+      <p className="mb-3 text-[12px] tracking-wide text-white/60">
         [ {STATS[0].value} {STATS[0].label} ]
       </p>
       <h2 className="mb-3 text-[18px] leading-snug text-white">
